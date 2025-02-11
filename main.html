@@ -8,28 +8,47 @@
     <title>Calculadora</title>
 </head>
 <body>
+    <div class="logo">
+        <h1>Calculadora</h1>
+        <img src="img/moon.png" alt="Calculadora Icono" class="icono">
+    </div>
     <!-- Pantalla de operaciones -->
     <div class="pantalla">
         <input type="text" id="pantalla" value="0" disabled>
     </div>
     <!-- Botones de la calculadora -->
     <div class="botones">
-        <button onclick="limpiar()">AC</button>
-        <button onclick="agregar('+/-')">#</button>
-        <button onclick="agregar('8')">8</button>
-        <button onclick="agregar('9')">9</button>
-        <button onclick="agregar('÷')">/</button>
-        <button onclick="agregar('4')">4</button>
-        <button onclick="agregar('5')">5</button>
-        <button onclick="agregar('6')">6</button>
-        <button onclick="agregar('*')">*</button>
-        <button onclick="agregar('1')">1</button>
-        <button onclick="agregar('2')">2</button>
-        <button onclick="agregar('3')">3</button>
-        <button onclick="agregar('-')">-</button>
-        <button onclick="agregar('0')">0</button>
-        <button onclick="agregar('.')">.</button>
-        <button onclick="calcular()">=</button>
-        <button onclick="agregar('+')">+</button>
+        <table>
+            <tr>
+                <td colspan="4"><button onclick="clearScreen()">AC</button></td>
+                <td><button onclick="input('7')">+/- </button></td>
+                <td><button onclick="input('8')">%</button></td>
+                <td><button onclick="input('9')">/</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="input('/')">7</button></td>
+                <td><button onclick="input('4')">8</button></td>
+                <td><button onclick="input('5')">9</button></td>
+                <td><button onclick="input('*')">x</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="input('1')">4</button></td>
+                <td><button onclick="input('2')">5</button></td>
+                <td><button onclick="input('3')">6</button></td>
+                <td><button onclick="input('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="input('0')">1</button></td>
+                <td><button onclick="input('.')">2</button></td>
+                <td><button onclick="calculate()">3</button></td>
+                <td><button onclick="input('+')">+</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="input('0')">.</button></td>
+                <td><button onclick="input('.')">0</button></td>
+                <td><button onclick="input()">&#9003;</button></td>
+                <td><button onclick="input('+')">=</button></td>
+            </tr>
+        </table>
 </body>
 </html></html>

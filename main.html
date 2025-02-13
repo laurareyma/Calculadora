@@ -3,52 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="js/main.js"></script>
-    <link rel="stylesheet" href="css/main.css">
     <title>Calculadora</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js" defer></script>
 </head>
 <body>
-    <div class="logo">
-        <h1>Calculadora</h1>
-        <img src="img/moon.png" alt="Calculadora Icono" class="icono">
-    </div>
-    <!-- Pantalla de operaciones -->
-    <div class="pantalla">
-        <input type="text" id="pantalla" value="0" disabled>
-    </div>
-    <!-- Botones de la calculadora -->
-    <div class="botones">
-        <table>
-            <tr>
-                <td colspan="4"><button onclick="clearScreen()">AC</button></td>
-                <td><button onclick="input('7')">+/- </button></td>
-                <td><button onclick="input('8')">%</button></td>
-                <td><button onclick="input('9')">/</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="input('/')">7</button></td>
-                <td><button onclick="input('4')">8</button></td>
-                <td><button onclick="input('5')">9</button></td>
-                <td><button onclick="input('*')">x</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="input('1')">4</button></td>
-                <td><button onclick="input('2')">5</button></td>
-                <td><button onclick="input('3')">6</button></td>
-                <td><button onclick="input('-')">-</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="input('0')">1</button></td>
-                <td><button onclick="input('.')">2</button></td>
-                <td><button onclick="calculate()">3</button></td>
-                <td><button onclick="input('+')">+</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="input('0')">.</button></td>
-                <td><button onclick="input('.')">0</button></td>
-                <td><button onclick="input()">&#9003;</button></td>
-                <td><button onclick="input('+')">=</button></td>
-            </tr>
-        </table>
+    <main class="calculadora" id="calculadora">
+        <!-- Encabezado de la calculadora -->
+         <!-- Título -->
+        <div class="encabezado">Calculator</div><br>
+        <!-- Historial -->
+        <div id="historial" class="historial">Historial</div>
+        <!-- Botón para cambiar el modo de la calculadora -->
+        <button id="cambiarModo">🌙</button><br><br>
+
+        <!-- Pantalla de la calculadora -->
+        <div class="pantalla" id="pantalla">0</div>
+
+        <!-- Botones de la calculadora -->
+        <div class="botones">
+            <!-- Fila 1 -->
+            <button class="btn btn-1" onclick="clearScreen()" aria-label="Limpiar pantalla">AC</button>
+            <button class="btn btn-2" onclick="input('+/-')" aria-label="Cambiar signo">+/-</button>
+            <button class="btn btn-2" onclick="input('%')" aria-label="Porcentaje">%</button>
+            <button class="btn btn-2" onclick="input('/')" aria-label="Dividir">÷</button>
+
+            <!-- Fila 2 -->
+            <button class="btn btn-3" onclick="input('7')" aria-label="7">7</button>
+            <button class="btn btn-3" onclick="input('8')" aria-label="8">8</button>
+            <button class="btn btn-3" onclick="input('9')" aria-label="9">9</button>
+            <button class="btn btn-2" onclick="input('x')" aria-label="Multiplicar">x</button>
+
+            <!-- Fila 3 -->
+            <button class="btn btn-3" onclick="input('4')" aria-label="4">4</button>
+            <button class="btn btn-3" onclick="input('5')" aria-label="5">5</button>
+            <button class="btn btn-3" onclick="input('6')" aria-label="6">6</button>
+            <button class="btn btn-2" onclick="input('-')" aria-label="Restar">-</button>
+
+            <!-- Fila 4 -->
+            <button class="btn btn-3" onclick="input('1')" aria-label="1">1</button>
+            <button class="btn btn-3" onclick="input('2')" aria-label="2">2</button>
+            <button class="btn btn-3" onclick="input('3')" aria-label="3">3</button>
+            <button class="btn btn-2" onclick="input('+')" aria-label="Sumar">+</button>
+
+            <!-- Fila 5 -->
+            <button class="btn btn-3" onclick="input('.')" aria-label="Punto decimal">.</button>
+            <button class="btn btn-3" onclick="input('0')" aria-label="0">0</button>
+            <button class="btn btn-3" onclick="input('borrar')" aria-label="Borrar">&#9003;</button>
+            <button class="btn btn-1" onclick="input('=')" aria-label="Igual">=</button>
+        </div>
+    </main>
 </body>
-</html></html>
+</html>
